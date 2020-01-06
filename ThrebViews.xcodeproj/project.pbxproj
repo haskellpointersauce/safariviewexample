@@ -13,6 +13,7 @@
 		76EF284023C35A3C0034E7CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EF283F23C35A3C0034E7CF /* Assets.xcassets */; };
 		76EF284323C35A3C0034E7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EF284123C35A3C0034E7CF /* LaunchScreen.storyboard */; };
 		76EF284E23C35A3C0034E7CF /* ThrebViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF284D23C35A3C0034E7CF /* ThrebViewsUITests.swift */; };
+		76EF285A23C35D6B0034E7CF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EF285923C35D6B0034E7CF /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		76EF284923C35A3C0034E7CF /* ThrebViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThrebViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EF284D23C35A3C0034E7CF /* ThrebViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrebViewsUITests.swift; sourceTree = "<group>"; };
 		76EF284F23C35A3C0034E7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76EF285923C35D6B0034E7CF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76EF285A23C35D6B0034E7CF /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 				76EF283723C35A3A0034E7CF /* ThrebViews */,
 				76EF284C23C35A3C0034E7CF /* ThrebViewsUITests */,
 				76EF283623C35A3A0034E7CF /* Products */,
+				76EF285823C35D6A0034E7CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +98,14 @@
 				76EF284F23C35A3C0034E7CF /* Info.plist */,
 			);
 			path = ThrebViewsUITests;
+			sourceTree = "<group>";
+		};
+		76EF285823C35D6A0034E7CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76EF285923C35D6B0034E7CF /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,14 +7,41 @@
 //
 
 import UIKit
+import WebKit
+import SafariServices
+import AuthenticationServices
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, ASWebAuthenticationPresentationContextProviding {
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        return self.view!.window!
+    }
+    
+    var authSession : ASWebAuthenticationSession!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let thePlaceYouReallyWantToBe = URL(string:"https://www.duckduckgo.com")!
+        
+        authSession = ASWebAuthenticationSession(url: thePlaceYouReallyWantToBe, callbackURLScheme: nil) { (a, b) in
+            print(a)
+            print(b)
+        }
+        
+        //let safariViewController = SFSafariViewController(url: thePlaceYouReallyWantToBe)
+        
+        //        super.present(safariViewController, animated: true) {
+        //            print("presented")
+        //        }
     }
-
-
+    
+    @IBAction func loginButton(_ sender: Any) {
+        if #available(iOS 13.0, *) {
+            authSession.presentationContextProvider = self
+        } else {
+            // Fallback on earlier versions
+        }
+        authSession.start()
+    }
 }
 
